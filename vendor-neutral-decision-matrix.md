@@ -13,10 +13,14 @@ This is not a feature battlecard. It is a discovery framework for understanding 
 | Integrations | Which SIEM, SOAR, ITSM, identity, cloud and firewall workflows are material? | Architecture and operational use cases |
 | Value measurement | What evidence will demonstrate reduced risk and sustained adoption? | Success plan, baseline and QBR measures |
 
-## Interview-level market perspective
+## Market vendor comparisons
 
-- Illumio is strongly associated with breach containment, label-driven policy and workload enforcement through its platform architecture.
-- Akamai Guardicore is commonly evaluated for granular microsegmentation, rich application visibility and a mix of agent and agentless coverage.
-- Cisco Secure Workload is commonly evaluated where customers value workload telemetry, microsegmentation and integration with broader Cisco security and network controls.
+Give each vendor the same two workload IDs, dependency and recovery scenario. Record the product version, supported operating system and evidence from the demonstration before scoring.
 
-The selection should follow validated customer requirements. Successful outcomes depend not only on product capability but also on asset ownership, label quality, application dependency knowledge, safe change practices and an operating model that sustains the control.
+| Candidate | What to demonstrate on the payment pilot | Evidence to retain |
+| --- | --- | --- |
+| [Illumio](https://product-docs-repo.illumio.com/Tech-Docs/Core/PDFs/Security_Policy_25_2.pdf) | Show how workload labels resolve to R004 and where selective enforcement applies. | Policy preview, effective scope and rollback record |
+| [Akamai Guardicore Segmentation](https://www.akamai.com/products/akamai-guardicore-segmentation) | Trace the payment dependency in the application map and show what happens when a workload moves. | Before-and-after map, coverage gaps and owner validation |
+| [Cisco Secure Workload](https://www.cisco.com/site/us/en/products/security/secure-workload/index.html) | Show how observed dependencies inform policy and which control enforces it on each pilot platform. | Flow evidence, enforcement location and recovery test |
+
+For each candidate record **demonstrated**, **partially demonstrated** or **unverified** against the same acceptance test. Ask the customer which remaining gap carries the greatest operational cost.

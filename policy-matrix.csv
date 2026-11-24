@@ -1,10 +1,10 @@
-rule_id,consumer,provider,service,port,environment,business_justification,owner,stage
-R001,CustomerPortal-Web,CustomerPortal-API,HTTPS,443,Production,Portal requests to approved API tier,Digital Channels,Validate
-R002,CustomerPortal-API,PolicyAdmin-Application,HTTPS,443,Production,Policy lookup and update,Policy Services,Validate
-R003,PolicyAdmin-Application,PolicyAdmin-Database,SQL,1433,Production,Policy transaction processing,Database Services,Validate
-R004,Payments-Application,Payments-Database,SQL,1433,Production,Payment transaction processing,Database Services,Stage
-R005,PolicyAdmin-Application,Analytics-ETL,HTTPS,443,Production,Approved analytics data export,Data Platform,Model
-R006,Management-Jump,All-Production,SSH-RDP,22-3389,Production,Controlled administrative access,Infrastructure,Enforce
-R007,SecurityOperations,All-Production,Telemetry,443-6514,Production,Security monitoring and log collection,SOC,Enforce
-R008,PartnerExchange,PolicyAdmin-Application,SFTP,22,Production,Approved partner data transfer,Integration Services,Model
-R009,UAT-Workloads,Production-Workloads,Any,Any,Cross,Denied by default; no UAT to production trust,Security Architecture,Proposed
+rule_id,consumer,provider,service,port,environment,business_justification,owner,stage,decision,crown_jewel_scope,validation_evidence
+R001,CustomerPortal-Web,CustomerPortal-API,HTTPS,443,Production,Portal requests to approved API tier,Digital Channels,Validate,Allow,None,Portal request succeeds
+R002,CustomerPortal-API,PolicyAdmin-Application,HTTPS,443,Production,Policy lookup and update,Policy Services,Validate,Allow,Indirect W006,Policy lookup succeeds
+R003,PolicyAdmin-Application,PolicyAdmin-Database,SQL,1433,Production,Policy transaction processing,Database Services,Validate,Allow,Direct W006,Policy transaction and unauthorised-path checks
+R004,Payments-Application,Payments-Database,SQL,1433,Production,Payment transaction processing,Database Services,Stage,Allow,Direct W008,Payment and reconciliation plus unauthorised-path checks
+R005,PolicyAdmin-Application,Analytics-ETL,HTTPS,443,Production,Approved analytics data export,Data Platform,Model,Allow,Indirect W006,Scheduled export succeeds
+R006,Management-Jump,All-Production,SSH-RDP,22 or 3389,Production,Controlled administrative access (split by approved target and service before enforcement),Infrastructure,Model,Allow,Candidate W006 and W008,Owner approves host and single management port per target
+R007,SecurityOperations,All-Production,Telemetry,443 or 6514,Production,Security monitoring and log collection (split by approved target and service before enforcement),SOC,Model,Allow,Candidate W006 and W008,Verify actual collector direction and transport per source
+R008,PartnerExchange,PolicyAdmin-Application,SFTP,22,Production,Approved partner data transfer,Integration Services,Model,Allow,Indirect W006,Scheduled partner transfer succeeds
+R009,UAT-Workloads,Production-Workloads,Any,Any,Cross,Denied by default; no UAT to production trust,Security Architecture,Proposed,Deny,Candidate W006 and W008,Verify UAT cannot initiate a production connection

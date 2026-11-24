@@ -23,3 +23,26 @@ The scorecard connects technical progress to customer outcomes. Thresholds shoul
 5. Agree the next outcomes, owners and dates.
 
 Avoid treating feature consumption as value by itself. Adoption is meaningful when it changes the customer’s risk or operating capability.
+
+## Kairos Yukton pilot snapshot
+
+The counts below come from the fictional inventory and matrix. Read the chart as workload counts in mutually exclusive stages. A host at Stage may have only one service under enforcement.
+
+```mermaid
+pie showData
+  title Workloads by adoption stage
+  "Observe" : 6
+  "Model" : 2
+  "Validate" : 3
+  "Stage" : 2
+  "Enforce" : 2
+```
+
+| Sponsor question | Snapshot | Evidence and decision |
+| --- | --- | --- |
+| How much of the estate is in routine enforcement? | 2 of 15 workloads (13%). | Count Enforce in the inventory. Both are supporting workloads. |
+| Are the two crown jewels protected? | 0 of 2 at Enforce. W006 is at Validate and W008 at Stage. | Test R004 before expanding payments. Request owner sign-off for R003. |
+| Which policies directly protect these databases? | 2 of 9 rules name a direct crown-jewel destination. Neither rule has reached Enforce. | R003 covers W006 and R004 covers W008. Review broad management and monitoring groups separately. |
+| Can the sponsor approve the next wave? | Pending business transaction and denied-path test evidence. | Bring the change record, exception owner and rollback result to the next review. |
+
+At the next QBR compare the same scope with the dated baseline. Show newly discovered assets separately so that a changing denominator is visible.

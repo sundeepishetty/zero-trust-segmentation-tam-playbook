@@ -1,12 +1,14 @@
-# Zero Trust Segmentation TAM Playbook
+# Kairos Yukton | Zero Trust Segmentation TAM Playbook
 
 This repository is a vendor-neutral customer adoption playbook for a fictional regulated insurer moving from broad network trust to workload-level segmentation across on-premises, Azure and AWS environments.
 
 It is designed to demonstrate how a Technical Account Manager connects security architecture, customer operating models, safe technical change and measurable business value. It is not an implementation of any commercial product and contains no customer or proprietary data.
 
+Start with the [inventory and policy field guide](field-guide.md). Follow payment rule R004 from the inventory through the architecture to the QBR decision.
+
 ## Customer scenario
 
-Northstar Mutual is a fictional UK insurer with:
+Kairos Yukton is a fictional UK insurer with:
 
 - on-premises policy-administration and payment systems;
 - customer portals and APIs in Azure;
@@ -41,7 +43,7 @@ flowchart TD
 | [qbr-scorecard.md](qbr-scorecard.md) | Executive-ready health, risk and value measures |
 | [escalation-runbook.md](escalation-runbook.md) | Customer escalation and recovery model |
 | [vendor-neutral-decision-matrix.md](vendor-neutral-decision-matrix.md) | Outcome-led comparison framework |
-| `references.md` | Public sources used to validate terminology |
+| [references.md](references.md) | Public sources used to validate terminology |
 
 ## TAM principles demonstrated
 

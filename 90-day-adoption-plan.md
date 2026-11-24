@@ -68,3 +68,24 @@
 - Reduced undocumented or unnecessary flows.
 - Operational runbook and ownership accepted.
 - Next-quarter roadmap linked to customer priorities.
+
+## Evidence for the next decision
+
+```mermaid
+flowchart TD
+  A["Day 30 · inventory and named crown jewels"] --> B{"Sponsor accepts scope?"}
+  B -->|No| A
+  B -->|Yes| C["Day 60 · signed flows and rollback rehearsal"]
+  C --> D{"Payments owner approves limited change?"}
+  D -->|No| C
+  D -->|Yes| E["Day 90 · service checks and exception log"]
+  E --> F["Sponsor decides to expand, hold or remediate"]
+```
+
+| Review | Evidence the TAM puts in front of the customer | NIST CSF 2.0 reference |
+| --- | --- | --- |
+| Day 30 | Inventory with W006 and W008, accountable teams and scope agreed by sponsor | ID.AM Asset Management and GV.RR Roles, Responsibilities, and Authorities |
+| Day 60 | R004 scope, approved consumer and service, exception register and a rehearsal of rollback | PR.AA Identity Management, Authentication, and Access Control |
+| Day 90 | Timestamped flow observations, payment and reconciliation checks, owner acceptance and next-wave decision | DE.CM Continuous Monitoring and ID.IM Improvement |
+
+These are proposed pilot checkpoints. NIST supplies the outcome vocabulary. Kairos Yukton sets the timetable and acceptance criteria. [NIST Cybersecurity Framework 2.0](https://doi.org/10.6028/NIST.CSWP.29)

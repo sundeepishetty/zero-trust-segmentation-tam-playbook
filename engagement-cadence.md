@@ -48,3 +48,16 @@ Additional reviews are triggered by:
 | Engineering/Product | Defects, roadmap feedback and complex product decisions |
 
 The TAM maintains context and continuity across these teams without pretending to replace their specialist responsibilities.
+
+## How a decision travels
+
+```mermaid
+flowchart TD
+  W["Weekly · owners review R004 tests"] -->|unresolved dependency| M["Monthly · service lead assigns resource and due date"]
+  M -->|material risk or investment| Q["Quarterly · sponsor decides next wave"]
+  Q -->|agreed priority| W
+  W -->|live service impact| I["Immediate · incident lead opens escalation"]
+  I -->|recovery and actions| W
+```
+
+For example, a missing reconciliation owner goes on the weekly action log. The monthly service lead assigns one. If live reconciliation fails during the pilot, the TAM invokes the escalation runbook immediately.
