@@ -1,0 +1,10 @@
+rule_id,consumer,provider,service,port,environment,business_justification,owner,stage
+R001,CustomerPortal-Web,CustomerPortal-API,HTTPS,443,Production,Portal requests to approved API tier,Digital Channels,Validate
+R002,CustomerPortal-API,PolicyAdmin-Application,HTTPS,443,Production,Policy lookup and update,Policy Services,Validate
+R003,PolicyAdmin-Application,PolicyAdmin-Database,SQL,1433,Production,Policy transaction processing,Database Services,Validate
+R004,Payments-Application,Payments-Database,SQL,1433,Production,Payment transaction processing,Database Services,Stage
+R005,PolicyAdmin-Application,Analytics-ETL,HTTPS,443,Production,Approved analytics data export,Data Platform,Model
+R006,Management-Jump,All-Production,SSH-RDP,22-3389,Production,Controlled administrative access,Infrastructure,Enforce
+R007,SecurityOperations,All-Production,Telemetry,443-6514,Production,Security monitoring and log collection,SOC,Enforce
+R008,PartnerExchange,PolicyAdmin-Application,SFTP,22,Production,Approved partner data transfer,Integration Services,Model
+R009,UAT-Workloads,Production-Workloads,Any,Any,Cross,Denied by default; no UAT to production trust,Security Architecture,Proposed

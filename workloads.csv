@@ -1,0 +1,16 @@
+workload_id,hostname,role,application,environment,location,criticality,owner,enforcement_stage
+W001,az-web-01,Web,CustomerPortal,Production,Azure-UK,High,Digital Channels,Observe
+W002,az-web-02,Web,CustomerPortal,Production,Azure-UK,High,Digital Channels,Observe
+W003,az-api-01,API,CustomerPortal,Production,Azure-UK,Critical,Digital Channels,Model
+W004,dc-app-01,Application,PolicyAdmin,Production,DataCentre,Critical,Policy Services,Validate
+W005,dc-app-02,Application,PolicyAdmin,Production,DataCentre,Critical,Policy Services,Validate
+W006,dc-db-01,Database,PolicyAdmin,Production,DataCentre,Critical,Database Services,Validate
+W007,dc-pay-01,Application,Payments,Production,DataCentre,Critical,Payments,Stage
+W008,dc-paydb-01,Database,Payments,Production,DataCentre,Critical,Database Services,Stage
+W009,aws-etl-01,Application,Analytics,Production,AWS-UK,High,Data Platform,Observe
+W010,aws-data-01,Database,Analytics,Production,AWS-UK,High,Data Platform,Observe
+W011,az-jump-01,Management,SharedServices,Production,Azure-UK,High,Infrastructure,Enforce
+W012,dc-siem-01,Security,SecurityOperations,Production,DataCentre,Critical,SOC,Enforce
+W013,az-api-uat,API,CustomerPortal,UAT,Azure-UK,Medium,Digital Channels,Observe
+W014,dc-app-uat,Application,PolicyAdmin,UAT,DataCentre,Medium,Policy Services,Observe
+W015,partner-sftp-01,Integration,PartnerExchange,Production,DataCentre,High,Integration Services,Model
