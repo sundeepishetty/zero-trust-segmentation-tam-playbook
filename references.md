@@ -1,19 +1,9 @@
-# Public references
+# References
 
-These sources were used to validate terminology and role alignment. The playbook remains an independent, vendor-neutral exercise.
-
-## Illumio role and TAM model
-
-- [Sr. Technical Account Manager — Illumio](https://jobs.ashbyhq.com/illumio/b328e5fe-aed8-4b18-a6d6-52550cb9f0c7)
-- [Technical Account Management Brief — Illumio](https://www.illumio.com/resource-center/technical-account-manager-brief)
-
-## Technical terminology
-
-- [Illumio Security Policy Guide 26.1](https://product-docs-repo.illumio.com/Tech-Docs/Core/PDFs/Security_Policy_26_1.pdf)
-- [VEN administration and policy states](https://product-docs-repo.illumio.com/Tech-Docs/Core/26.1/Admin/out/en/ven-administration-guide/overview-of-ven-administration/about-ven-administration-on-workloads.html)
-- [VEN-to-PCE communication](https://product-docs-repo.illumio.com/Tech-Docs/Core/26.1/Admin/out/en/ven-administration-guide/ven-to-pce-communication.html)
-- [Pairing profiles and scripts](https://product-docs-repo.illumio.com/Tech-Docs/Core/26.1/Install-Upgrade-Admin/out/en/ven-installation-and-upgrade/ven-installation---upgrade-using-ven-library/pairing-profiles-and-scripts.html)
-
-## Reading note
-
-The repository intentionally avoids product-specific configuration commands, screenshots and fabricated telemetry. It focuses on the customer adoption and operating model that a TAM would apply around a segmentation programme.
+| Topic | Source | Use in this playbook |
+| --- | --- | --- |
+| Zero Trust | [NIST SP 800-207](https://doi.org/10.6028/NIST.SP.800-207) | Resource-level access decisions and explicit authorisation |
+| Governance and evidence | [NIST CSF 2.0](https://doi.org/10.6028/NIST.CSWP.29) | Common vocabulary for ownership, outcomes and pilot reviews |
+| Incident response | [NIST SP 800-61 Rev. 3](https://doi.org/10.6028/NIST.SP.800-61r3) | Detection, response, recovery and improvement |
+| Segmentation | [Illumio Core Security Policy Guide](https://product-docs-repo.illumio.com/Tech-Docs/Core/PDFs/Security_Policy_25_2.pdf) | Workload policy, visibility and enforcement scope |
+| Package exposure | [NGINX advisories](https://nginx.org/en/security_advisories.html) and [Ubuntu notices](https://ubuntu.com/security/notices) | Identify affected packages and supported fixes |
